@@ -1,5 +1,6 @@
-const reverseString = function() {
-    text = "hello there";
+let text = "";
+
+const reverseString = function(text) {
     text = text.split("");
     text = text.reverse();
     text = text.join("");
@@ -7,7 +8,7 @@ const reverseString = function() {
     return text; 
 };
 
-console.log(reverseString());
+console.log(reverseString("hello"));
 
 
 // Do not edit below this line
