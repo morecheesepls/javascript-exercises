@@ -3,7 +3,7 @@ const removeFromArray = function() {
     
     for (arg of args) {
         if (arg !== args[0]) {
-            console.log(notArgOne = arg);
+            console.log(notArgOne = [arg]);
         }
         continue;
     }
