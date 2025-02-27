@@ -1,18 +1,24 @@
 const sumAll = function() {
     args = [...arguments].sort();
-    console.log(args);
+    expandedArray = [];
     
-    const newArray = function() {
-        for (arg of args) {
-            if (arg < 0 || typeof arg !== "number" || !Number.isInteger(arg)) {
-                return console.log("ERROR");
+    for (arg of args) {
+        if (arg < 0 || typeof arg !== "number" || !Number.isInteger(arg)) {
+            return console.log("ERROR");
+        } else {
+            for (let i = args[0]; i <= args[1]; i++) {
+                expandedArray.push(i);
             }
-        }
-    }
 
-    return newArray();
+            return console.log(expandedArray);
+        }
+    };
+
+
 
 };
+
+
 
 sumAll(1, 10);
 

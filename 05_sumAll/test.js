@@ -1,3 +1,9 @@
-const num = -10;
+const myArray = [10, 20];
+expandedArray = [];
 
-console.log(Number.isInteger(num));
+
+for (let i = myArray[0]; i <= myArray[1]; i++) {
+    expandedArray.push(i);
+};
+
+console.log(expandedArray);
