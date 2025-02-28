@@ -1,10 +1,11 @@
-const myArray = [10, 20];
-expandedArray = [];
+const myFunction = function() {
+    args = [...arguments];
+    let arr = [];
 
-
-for (let i = myArray[0]; i <= myArray[1]; i++) {
-    expandedArray.push(i);
+    for (let i = args[0]; i <= args[1]; i++) {
+        arr.push(i);  
+    };
+    return arr;  
 };
 
-
-console.log(expandedArray);
+console.log(myFunction(10, 15));

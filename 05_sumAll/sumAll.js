@@ -4,25 +4,23 @@ const sumAll = function() {
     sum = 0;
     
     for (arg of args) {
-        if (arg < 0 || typeof arg !== "number" || !Number.isInteger(arg)) {
+        if (arg < 0 || typeof arg !== "number" || !Number.isInteger(arg)) { // Error Checks
             return console.log("ERROR");
         } else {
-            for (let i = args[0]; i <= args[1];) {
-                expandedArray.push(i++);
-            }
-        }
+            for (let i = args[0]; i <= args[1]; i++) { // Fill in range between the given arguments and assign to its own array
+                expandedArray.push(i);
+            };
+            
+            for (num of expandedArray) { // Loops through new array and add to sum with each loop
+                sum += num;
+            };
+
+            return sum;
+        };
     };
-
-    for (num of expandedArray) {
-        sum += num;
-    }
-
-    return console.log(sum);
 };
 
-
-
-sumAll(10, 15);
+console.log(sumAll(10, 15));
 
 // Do not edit below this line
 module.exports = sumAll;
