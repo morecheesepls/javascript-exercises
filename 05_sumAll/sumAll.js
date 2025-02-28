@@ -4,8 +4,9 @@ const sumAll = function() {
     sum = 0;
     
     for (arg of args) {
-        if (arg < 0 || typeof arg !== "number" || !Number.isInteger(arg)) { // Error Checks
-            return console.log("ERROR");
+        if (args[0] < 0 || typeof args[0] !== "number" || !Number.isInteger(args[0]) 
+            || args[1] < 0 || typeof args[1] !== "number" || !Number.isInteger(args[1])) { // Error Checks
+            return "ERROR";
         } else {
             for (let i = args[0]; i <= args[1]; i++) { // Fill in range between the given arguments and assign to its own array
                 expandedArray.push(i);
@@ -20,7 +21,7 @@ const sumAll = function() {
     };
 };
 
-console.log(sumAll(10, 15));
+console.log(sumAll(10, "90"));
 
 // Do not edit below this line
 module.exports = sumAll;
